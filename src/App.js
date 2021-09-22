@@ -1,14 +1,38 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-import About from './components/About';
+import Header from './components/Header';
 import Nav from './components/Nav';
+import Body from './components/Body';
+import Footer from './components/Footer';
 
 function App() {
+  const [sections] = useState([
+    { name: "home"},
+    { name: "about" },
+    { name: "profiles" },
+    { name: "gallery" },
+    { name: "contact" }
+  ]);
+
+  const [currentSection, setCurrentSection] = useState(sections[0]);
+
   return (
-    // Nav and introduction page for chem christmas extravaganza
-    <header>Testing</header>
+    <div>
+      <Header />
+      <Nav
+        sections={sections}
+        setCurrentSection={setCurrentSection}
+        currentSection={currentSection}
+    ></Nav>
+
+      <main>
+        <Body currentSection={currentSection}></Body>
+      </main>
+
+      <Footer />
+
+    </div>
   );
 }
 
