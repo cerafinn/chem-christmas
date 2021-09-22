@@ -25,3 +25,18 @@ header {
   margin: 10px;
   font-size: 40px;
 }
+
+.navigation {
+  text-align: center;
+}
+
+.navbar {
+  list-style: none;
+  display: inline-block;
+}
+
+.mainEl {
+  display: inline-block;
+  margin-left: 10px;
+  cursor: pointer;
+}
