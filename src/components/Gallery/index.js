@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Previous () {
+function Gallery () {
 
   return (
     <div>
@@ -9,4 +9,4 @@ function Previous () {
   );
 };
 
-export default Previous;
+export default Gallery;
